@@ -16,7 +16,7 @@ pipeline{
     
     }
     
-    stages{
+    
     stage('service httpd start'){
       steps{
       echo "httpd start"
@@ -25,7 +25,7 @@ pipeline{
       }
     
     }
-       stages{
+       
     stage('deploy index.html on httpd'){
       steps{
       echo "deploy index.html on httpd"
@@ -35,7 +35,7 @@ pipeline{
     
     }
   
-  }
+  
   
   
 }
