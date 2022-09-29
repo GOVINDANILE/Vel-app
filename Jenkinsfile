@@ -15,6 +15,25 @@ pipeline{
       }
     
     }
+    
+    stages{
+    stage('service httpd start'){
+      steps{
+      echo "httpd start"
+      sh "service httpd start"
+        sh "checkconfig httpd on"
+      }
+    
+    }
+       stages{
+    stage('deploy index.html on httpd'){
+      steps{
+      echo "deploy index.html on httpd"
+      sh "cp -r /mnt/index.html /var/www/html"
+        sh "chmod -R 777 /var/www/html"
+      }
+    
+    }
   
   }
   
