@@ -1,20 +1,22 @@
 pipeline{
-
-agent any
-
-stages{
-
-stage ('touch-1'){
-steps{
-sh "touch file-1"
-
-}
-
-
-}
-
-
-}
-
-
+  agent{
+    label{
+    label "built-in"
+    customWorkspace "/mnt"
+      
+    }
+  
+  }
+  stages{
+    staage ('installing httpd'){
+      steps{
+      echo "Installing httpd"
+      sh "yum install httpd -y"
+      }
+    
+    }
+  
+  }
+  
+  
 }
