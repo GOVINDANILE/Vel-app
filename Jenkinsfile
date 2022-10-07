@@ -30,7 +30,7 @@ pipeline{
       steps{
       echo "deploy index.html on httpd"
       sh "sudo cp -r /mnt/index.html /var/www/html"
-        sh "sudo chmod -R 777 /var/www/html/index.html"
+        sh "sudo chmod -R 777 /var/www/html/"
       }
     
     }
