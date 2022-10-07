@@ -11,7 +11,8 @@ pipeline{
     stage('installing httpd'){
       steps{
       echo "Installing httpd"
-      sh "yum install httpd -y"
+        sh "yum remove httpd -y"
+        sh "yum install httpd -y"
       }
     
     }
